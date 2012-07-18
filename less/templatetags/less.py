@@ -85,7 +85,7 @@ def less(path):
 
     output_directory = os.path.join(STATIC_ROOT, LESS_OUTPUT_DIR, os.path.dirname(path))
 
-    hashed_mtime = "%s-%s" % (str(datetime.datetime.now().date(), datetime.datetime.now().hour)
+    hashed_mtime = "%s-%s" % (str(datetime.datetime.now().date()), datetime.datetime.now().hour)
     #get_hashed_mtime(full_path)
 
     if filename.endswith(".less"):
