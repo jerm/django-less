@@ -11,7 +11,6 @@ import shlex
 import subprocess
 import os
 import sys
-import datetime
 
 
 logger = logging.getLogger("less")
@@ -85,8 +84,7 @@ def less(path):
 
     output_directory = os.path.join(STATIC_ROOT, LESS_OUTPUT_DIR, os.path.dirname(path))
 
-    hashed_mtime = "%s-%s" % (str(datetime.datetime.now().date()), datetime.datetime.now().hour)
-    #get_hashed_mtime(full_path)
+    hashed_mtime = get_hashed_mtime(full_path)
 
     if filename.endswith(".less"):
         base_filename = filename[:-5]
